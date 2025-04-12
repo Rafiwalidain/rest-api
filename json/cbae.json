@@ -1,0 +1,34 @@
+[
+  {
+    "nama": "andi wijaya",
+    "umur": 23,
+    "npm": "21120119120003",
+    "lulus": true,
+    "alamat": {
+      "jalan": "Jl. Sudirman No. 20",
+      "kota": "Surabaya",
+      "provinsi": "Jawa Timur"
+    },
+    "hobi": ["bermain bola", "berenang"]
+  },
+  {
+    "nama": null,
+    "umur": null,
+    "npm": null,
+    "lulus": null,
+    "alamat": null,
+    "hobi": null
+  },
+  {
+    "nama": "rafi walidain",
+    "umur": 20,
+    "npm": "21120119120014",
+    "lulus": true,
+    "alamat": {
+      "jalan": "Jl. Raya No. 1",
+      "kota": "Jakarta",
+      "provinsi": "DKI Jakarta"
+    },
+    "hobi": ["membaca", "bermain game", "bersepeda"]
+  }
+]
