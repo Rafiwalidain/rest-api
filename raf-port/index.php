@@ -1,3 +1,26 @@
+<?php
+function get_CURL($url)
+{
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec($curl);
+  curl_close($curl);
+
+  return json_decode($result, true);
+}
+
+$result = get_CURL("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCa1DY-YSt6NxNYTbr_w_JtA&key=AIzaSyBboW5hDbdsFx9a7mQPYVJAP92ys5i0Zt0");
+
+$youtubeProfile = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$youtubeName = $result['items'][0]['snippet']['title'];
+$youtubeSubs = $result['items'][0]['statistics']['subscriberCount'];
+
+
+// latest video
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +32,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
   <!-- My CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <title>My Portfolio</title>
 </head>
@@ -82,11 +105,11 @@
         <div class="col-md-5">
           <div class="row">
             <div class="col-md-4">
-              <img src="./img/profile1.png" alt="" width="200" class="rounded-circle img-thumbnail shadow-lg">
+              <img src="<?php echo $youtubeProfile; ?>" alt="" width="200" class="rounded-circle img-thumbnail shadow-lg">
             </div>
             <div class="col-md-8">
-              <h5>Rafi Walidain</h5>
-              <p>10000 Subscribers</p>
+              <h5><?php echo $youtubeName ?></h5>
+              <p><?php echo $youtubeSubs ?></p>
             </div>
           </div>
           <div class="row mt-3 mb-3">
