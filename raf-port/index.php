@@ -18,6 +18,9 @@ $youtubeSubs = $result['items'][0]['statistics']['subscriberCount'];
 
 
 // latest video
+$urlView = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa1DY-YSt6NxNYTbr_w_JtA&key=AIzaSyBboW5hDbdsFx9a7mQPYVJAP92ys5i0Zt0&order=viewCount&maxResults=1";
+$resultView = get_CURL($urlView);
+$latestVideoId = $resultView['items'][0]['id']['videoId'];
 
 ?>
 
@@ -115,7 +118,7 @@ $youtubeSubs = $result['items'][0]['statistics']['subscriberCount'];
           <div class="row mt-3 mb-3">
             <div class="col">
               <div class="embed-responsive embed-responsive-22by12">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-BmTKA1xCm8" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $latestVideoId ?>" allowfullscreen></iframe>
               </div>
             </div>
           </div>
