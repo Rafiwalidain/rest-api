@@ -113,7 +113,9 @@ $latestVideoId = $resultView['items'][0]['id']['videoId'];
             <div class="col-md-8">
               <h5><?php echo $youtubeName ?></h5>
               <p><?php echo $youtubeSubs ?></p>
+              <div class="g-ytsubscribe" data-channelid="UCa1DY-YSt6NxNYTbr_w_JtA" data-layout="default" data-count="default"></div>
             </div>
+
           </div>
           <div class="row mt-3 mb-3">
             <div class="col">
@@ -278,6 +280,7 @@ $latestVideoId = $resultView['items'][0]['id']['videoId'];
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB3a5c6+2Q5h4e5f5e5f5e5f5e5f5e5f5e5f5e5f5" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 
 </html>
